@@ -5,9 +5,9 @@ calc = Calculator()
 print("Select option / * + - ")
 option = input()
 
-print("Insert 2 numbers: ")
-nr1 = int(input("nr1 = "))
-nr2 = int(input("nr2 = "))
+print("Please insert 2 numbers: ")
+nr1 = int(input("Number 1 = "))
+nr2 = int(input("Number 2 = "))
 
 if option == "+":
     calc.summa(nr1, nr2)
