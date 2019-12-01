@@ -1,17 +1,21 @@
-print("Hello world")
-def calc(*args) :
-    if(args[2]=='+'):
-        a = args[0]+args[1]
-    elif(args[2]=='-'):
-        a=args[0]-args[1]
-    elif(args[2] == '*'):
-        a= args[0]*args[1]
-    elif(args[2]== '/'):
-        a=args[0]/args[1]
-    else:
-        a = str(args[0])+str(args[1])
-    return a
-d = int(input('A'))
-b = int(input('B'))
-c = input('Cno sdelati')
-print(calc(d,b,c))
+from Calculator import Calculator
+
+calc = Calculator()
+
+print("Select option / * + - ")
+option = input()
+
+print("Insert 2 numbers: ")
+nr1 = int(input("nr1 = "))
+nr2 = int(input("nr2 = "))
+
+if option == "+":
+    calc.summa(nr1, nr2)
+elif option == "*":
+    calc.umnojiti(nr1, nr2)
+elif option == "/":
+    calc.deliti(nr1, nr2)
+elif option == "-":
+    calc.minus(nr1, nr2)
+else:
+    print("Unknown option")
